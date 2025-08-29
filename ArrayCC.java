@@ -503,8 +503,127 @@ public class ArrayCC{
     }
 }*/
 
-// new code
-System.out.print("GITHUB")
+
+//SHORTEST PATH
+import java.util.*;
+public class ArrayCC{
+    public static double shortestpath(String path){
+        int x1 = 0;
+        int x2 = 0;
+        int y1 = 0;
+        int y2 = 0;
+        double f = 0;
+        for (int i = 0 ; i < path.length(); i++){
+            char ch = path.charAt(i);
+            if( ch == 'N'){
+                y2++;
+            }
+            else if(ch == 'S'){
+                y2--;
+            }
+            else if( ch == 'E'){
+                x2++;
+            }
+            else if( ch =='W'){
+                x2--;
+            }
+            int a = x2 - x1;
+            int b = y2 -y1;
+            int c = a*a;
+            int d = b*b;
+            int e = c+d;
+            f = Math.sqrt(e);    
+        }
+        return f;    
+    }
+    public static void main(String args[]){
+        String path = "WNEENESENNN";
+        System.out.println(shortestpath(path));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
