@@ -1,3 +1,4 @@
+package DSA;
 //SUM OF a AND b TAKEN BY USER
 /*import java.util.*;
 public class JavaBasics{
@@ -35,9 +36,6 @@ public class JavaBasics{
         float radius = sc.nextFloat();
         float Area = 3.14f * radius * radius ;
         System.out.println(Area);
-        
-
-
     }
     
 }
@@ -54,10 +52,7 @@ public class JavaBasics{
         }
         else{
             System.out.println("YOU ARE NOT AN ADULT");
-
         }
-
-
     }
 }
     */

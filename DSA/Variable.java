@@ -1,3 +1,4 @@
+package DSA;
 //INPUT THREE NUMBERA A B C AND FIND AVERAGE OF THEM
 /*import java.util.*;
 public class Variable{

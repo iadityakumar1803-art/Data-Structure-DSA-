@@ -1,3 +1,5 @@
+package DSA;
+//CREATE , INSERT , UPDATE ARRAY
 /*import java.util.*;
 public class ArrayCC{
     public static void main(String args[]){
@@ -149,7 +151,6 @@ public class ArrayCC{
 }
 */
 
-
 //PAIRS IN ARRAY
 /*public class ArrayCC{
     public static void pairs(int number[]){
@@ -194,7 +195,6 @@ public class ArrayCC{
 
 }*/
 
-
 // SUBARRAYSUM & SUM & MAX SUM & MIN SUM
 /*import java.util.*;
 public class ArrayCC{
@@ -231,7 +231,6 @@ public class ArrayCC{
     }
 }*/
 
-
 //TRAPPING RAIN WATER
 /*import java.util.*;
 public class ArrayCC{
@@ -248,6 +247,7 @@ public class ArrayCC{
     }
 }
     */
+
 //LEETCODE QUESTION 1920
 /*import java.util.*;
 public class ArrayCC{
@@ -274,7 +274,6 @@ public class ArrayCC{
     }
 }
 */
-
 
 //BUBBLE SORT
 /*import java.util.*;
@@ -428,8 +427,8 @@ public class ArrayCC{
 }
 */
 
-/*//SPIRAL MATRIX
-import java.util.*;
+//SPIRAL MATRIX
+/*import java.util.*;
 public class ArrayCC{
     public static void spiralprint(int matrix[][]){
         int startrow = 0;
@@ -476,9 +475,8 @@ public class ArrayCC{
     }
 }*/
 
-
 //PALINDROME
-/*  import java.util.*;
+  /*import java.util.*;
 public class ArrayCC{
     public static boolean plaindrome(String word){
         int n = word.length();
@@ -503,9 +501,8 @@ public class ArrayCC{
     }
 }*/
 
-
 //SHORTEST PATH
-import java.util.*;
+/*import java.util.*;
 public class ArrayCC{
     public static double shortestpath(String path){
         int x1 = 0;
@@ -541,12 +538,196 @@ public class ArrayCC{
         System.out.println(shortestpath(path));
     }
 }
+*/
 
+//SUBSTRING
+/*public class ArrayCC{
+    public static void substring(String str , int si , int ei){
+        for (int i = si ; i<ei ; i++){
+            System.out.print(str.charAt(i));
+        }
+    }
+    public static void main (String arags[]){
+        String str = "AdityaGupta";
+        int si = 0;
+        int ei = 6;
+        substring(str , si ,ei);
+    }
+}*/
 
+// SUBSTRING USING JAVA ALREADY GIVEN FUNCTION
+/*public class ArrayCC{
 
+    public static void main (String arags[]){
+        String str = "AdityaGupta";
+        System.out.print(str.substring(0,6 ));
+    }
+}
+    */
 
+//LARGEST STRING
+/*public class ArrayCC{
+    public static void main(String args[]){
+        String fruit[] = { "mango" , "orange" , "apple"};
+        String largest = fruit[0];
+        for (int i = 1 ; i< fruit.length; i++){
+            if(largest.compareTo(fruit[i])< 0){
+                largest = fruit[i];
+            }
+        }
+        System.out.print(largest);
+    }
+}*/
 
+//FIRST LETTER TO UPPERCASE
+/*import java.util.*;
+public class ArrayCC{
+    public static void uppercase(String sb){
+        StringBuilder us = new StringBuilder("");
+        for(int i = 0 ; i<sb.length() ; i++){
+            
+            if(sb.charAt(i) == ' '){
+                char ch2 = sb.charAt(i+1);
+                char ch1 = Character.toUpperCase(ch2);
+                us.append(' ');
+                us.append(ch1);
+                i++;    
+            }
+            else if(i == 0){
+                char ch = Character.toUpperCase(sb.charAt(i));
+                us.append(ch);
+            }
+            else{
+                char ch1 = sb.charAt(i);
+                us.append(ch1);
+            }
+        }
+        for(int i = 0 ; i<us.length() ; i++){
+            System.out.print(us.charAt(i));
+        }
+    }
+    public static void main(String args[]){
+        String sb = "hello WORLD.";
+        uppercase(sb);
+    }
+}*/
 
+//STRING COMPRESSION
+/*import java.util.*;
+public class ArrayCC{
+    public static void compression(String sb ){
+        StringBuilder ub = new StringBuilder("");
+        for(int i = 0 ; i<sb.length() ; i++){
+            char ch1 = sb.charAt(i);
+            int count = 1;
+        while( i< sb.length() - 1 && ch1 == sb.charAt(i+1)){
+                count++;
+                i++;
+            }
+            if(count>1){
+                ub.append(ch1);
+                ub.append(count);
+            }
+            else{
+                ub.append(ch1);
+            }
+        }
+        for (int i = 0 ; i<ub.length() ; i++){
+            System.out.print(ub.charAt(i));
+        }
+    }
+    public static void main(String args[]){
+        String sb ="aaabbbccdddee";
+        compression(sb);
+    }
+
+}
+*/
+
+//CHECK IF NUMBER IS ODD OR EVEN
+/*public class ArrayCC{
+    public static void oddoreven(int n){
+        int bitmask = 1;
+        if ((n & bitmask) == 0){
+            System.out.println("EVEN NUMBER ....");
+        }
+        else{
+            System.out.println("ODD NUMBER ....");
+        }
+    }
+    public static void main (String args[]){
+        oddoreven(4);
+        oddoreven(7);
+        oddoreven(10);
+        oddoreven(15);
+    }
+}
+*/
+
+//GET ITH BIT
+/*public class ArrayCC{
+    public static void getibit(int n , int i){
+        int bitmask = (1<<i);
+        if((n & bitmask) == 0){
+            System.out.println("i^th bit will be 0");
+        }
+        else{
+            System.out.println("i^th bit will be 1");
+        }
+
+    }
+    public static void main(String args[]){
+        getibit(10 , 2);
+
+    }
+}
+*/
+
+//UPDATE ITH BIT
+/*public class ArrayCC{
+    public static void updatebit(int n , int i , int u){
+        if (u ==0){
+            int bitMask= ~(1<<i);
+            System.out.println(n & bitMask);
+        }
+        else if (u ==1){
+            int bitMask = (1<<i);
+            System.out.println(n | bitMask);
+        }
+    }
+    public static void main(String args[]){
+        int n = 8;
+        int i = 2;
+        int u = 1;
+        updatebit(n , i , u);
+    }
+}
+*/
+
+//CLEAR LAST ITH BIT
+/*public class ArrayCC{
+    public static void clearbits(int n , int i ){
+        int k = 0;
+        for(int a = i ; a>=0 ; a--){
+            int bitMask = ~(1<<a);
+            n =n & bitMask;
+        }
+        System.out.println(n);
+    }
+    public static void main(String args[]){
+        int n = 7;
+        int i = 1;
+        clearbits(n , i);
+    }
+}
+*/
+import java.util.*;
+public class ArrayCC{
+    public static void main(String args[]){
+        System.out.print("Hello");
+
+    }
+}
 
 
 
